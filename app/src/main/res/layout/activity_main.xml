@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42000002">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B3EBF6">
+
+            <TextView
+                android:id="@+id/questionTextView"
+                android:layout_width="272dp"
+                android:layout_height="83dp"
+                android:fontFamily="@font/baloo_tamma"
+                android:paddingTop="8dp"
+                android:textAlignment="center"
+                android:textSize="48sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.345" />
+
+            <TextView
+                android:id="@+id/questionNumberTextView"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="80dp"
+                android:layout_height="51dp"
+                android:background="#C2CDF8"
+                android:fontFamily="@font/baloo_tamma"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingTop="20dp"
+                android:shadowColor="#F3F4F4"
+                android:text="1/10"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.954"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.056" />
+
+            <ImageButton
+                android:id="@+id/infoImageButton"
+                android:layout_width="37dp"
+                android:layout_height="30dp"
+                android:background="#90D4F3"
+                android:onClick="information"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.015"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.019"
+                app:srcCompat="@drawable/baseline_help_outline_24" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="288dp"
+                android:layout_height="62dp"
+                android:gravity="center"
+                android:hint="ENTER YOUR ANSWER"
+                android:paddingTop="0dp"
+                app:boxBackgroundMode="outline"
+                app:hintTextColor="#022A4A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.85">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/answerEditTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp"
+                    android:fontFamily="@font/baloo_tamma"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:textAlignment="center" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/questionHeadingTextView"
+                android:layout_width="77dp"
+                android:layout_height="25dp"
+                android:fontFamily="@font/baloo_tamma"
+                android:gravity="center"
+                android:text="QUESTION"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.94"
+                app:layout_constraintStart_toStartOf="@+id/infoImageButton"
+                app:layout_constraintTop_toTopOf="@+id/questionNumberTextView"
+                app:layout_constraintVertical_bias="0.007" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/bannerTextView"
+        android:layout_width="361dp"
+        android:layout_height="79dp"
+        android:fontFamily="@font/baloo_tamma"
+        android:rotation="-5"
+        android:text="UNSCRAMBLE..."
+        android:textAlignment="center"
+        android:textColor="#FF9800"
+        android:textSize="48sp"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <Button
+        android:id="@+id/submitButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="305dp"
+        android:layout_height="53dp"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <Button
+        android:id="@+id/skipButton"
+        style="@style/Widget.Material3.Button.IconButton.Outlined"
+        android:layout_width="304dp"
+        android:layout_height="53dp"
+        android:text="skip"
+        android:textColor="#5D5DFB"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.465" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="13dp"
+        android:background="#E1DFDF"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="score box"
+        android:textAlignment="center"
+        android:textColor="#2C2C2C"
+        android:textSize="34sp"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
