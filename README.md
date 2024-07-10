@@ -15,7 +15,6 @@ _Un Scrumble_ is a modern gaming app designed to make learning more easy and int
 
 
 **Backend:**  
-Powered by FireBase, ensuring fast and reliable data handling.  
 - *Material Design Components:* Leverage Material Components for Android to ensure consistent UI/UX design throughout the app, including Material Toolbar for navigation and action items.
 - *Data Strcuture:* Uses data structures to handle intermediate operations.
 
